@@ -42,10 +42,6 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         }
       },
-      jsTest: {
-        files: ['test/spec/{,*/}*.js'],
-        tasks: ['newer:jshint:test', 'karma']
-      },
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
@@ -398,7 +394,7 @@ module.exports = function (grunt) {
     },
     pages: {
       options: {
-        remote: 'git@github.com:example_user/example_webapp.git',
+        remote: 'git@github.com:paranoid-and-roid/yeoman-grunt-deploy.git',
         branch: 'gh-pages'
       }
     },
